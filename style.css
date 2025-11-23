@@ -1,0 +1,134 @@
+.cabeçalhoareadocliente{
+    background-color: #FFC107;
+    text-align: center;
+    padding: 20px;
+    
+
+}
+.cabeçalhoareadocliente img{
+    width: 500px;
+    height: auto;
+    border-radius: 10px; 
+}
+
+
+.card-produto {
+    background-color: white;
+   border: 1px solid #ddd;
+   border-radius: 10px;
+   padding:15px;
+   margin: 10px auto;
+   max-width: 90%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.img-produto img{
+width: 150px
+}
+
+.link-card{
+    text-decoration:none;
+    color:inherit;
+    display: block;
+}
+
+.link-card:active .card-produto {
+    background-color: #f0f0f0; 
+    border-color: #FFC107;    
+}
+    
+
+/*Css da descriçao do pedido */
+
+
+.barra-topo{
+    padding: 15px;
+    background-color: #FFC107;
+}
+
+.botao-voltar{
+   text-decoration: none;
+   color: #333;
+   font-weight: bold;
+   font-size: 18px;
+}
+
+.detalhe-container{
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+}
+
+.destaque-imagem img{
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+/* Descrição */
+.informaçao-produtos h1{
+    font: 24px;
+    margin-bottom: 15px;
+    color: #FFC107;
+
+}
+
+.informaçao-adiconais{
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.preco-grande {
+    font-size: 28px;
+    color: #FFC107;
+    font-weight: bold;
+    display: block;
+    margin: 30px;
+}
+
+/* Botao de quantidade */
+
+.selecao-quantidade{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;  
+}
+
+.btn-qtd{
+    width: 50px;
+    text-align: center;
+    font-size: 22px;
+    border: none;
+    font-weight: bold;
+}
+
+.botao-pedir{
+    background-color: #FFC107;
+    color: black;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+ 
+}
+/* essa linha abaixo tira a setinha que esta bugando a barra de quantidade */
+input[type=number]::-webkit-inner-spin-button,
+input[rtpe=number]::-webkit-outer-spin-button{
+    -webkit-apperance:none;
+    margin: 0;
+}
+
+/* essa linhda centraliza o numero dentro da barra de quantidade */
+
+#quantidade{
+    text-align: center;
+    font-size: 18px;
+    color: #FFC107;
+}
+
+
+
