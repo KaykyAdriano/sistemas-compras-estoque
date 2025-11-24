@@ -71,14 +71,13 @@ width: 150px
 }
 
 .destaque-imagem img{
-
-    width: 250px;
+    width: 170px;
     margin-top: 20px;
 }
 
 /* Descrição */
 .informaçao-produtos h1{
-    font: 24px;
+    font-size: 25px;
     margin-bottom: 15px;
     color: #333;
 
@@ -90,7 +89,7 @@ width: 150px
 }
 
 .preco-grande {
-    font-size: 28px;
+    font-size: 30px;
     color: #FFC107;
     font-weight: bold;
     display: block;
@@ -147,7 +146,6 @@ input[rtpe=number]::-webkit-outer-spin-button{
     font-size: 18px;
     color: #FFC107;
 }
-
 
 
 
