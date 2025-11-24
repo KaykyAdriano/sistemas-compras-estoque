@@ -1,4 +1,7 @@
 .cabeçalhoareadocliente{
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
     background-color: #FFC107;
     text-align: center;
     padding: 20px;
@@ -6,9 +9,9 @@
 
 }
 .cabeçalhoareadocliente img{
-    width: 500px;
+    width: 300px;
     height: auto;
-    border-radius: 10px; 
+
 }
 
 
@@ -42,6 +45,12 @@ width: 150px
 
 /*Css da descriçao do pedido */
 
+.informaçao-adicionais{
+
+    color: #333;
+   
+}
+
 
 .barra-topo{
     padding: 15px;
@@ -62,15 +71,17 @@ width: 150px
 }
 
 .destaque-imagem img{
-    width: 400px;
-    margin-bottom: 20px;
+
+    width: 250px;
+    width: auto;
+    margin-top: 20px;
 }
 
 /* Descrição */
 .informaçao-produtos h1{
     font: 24px;
     margin-bottom: 15px;
-    color: #FFC107;
+    color: #333;
 
 }
 
@@ -84,24 +95,32 @@ width: 150px
     color: #FFC107;
     font-weight: bold;
     display: block;
-    margin: 30px;
+    margin: 15px;
 }
 
 /* Botao de quantidade */
 
 .selecao-quantidade{
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 30px;  
+    gap: 10px;
+    margin: 20px;
 }
 
 .btn-qtd{
-    width: 50px;
+    width: 45px;
+    height: 40px;
+    background-color: #FFC107;
+    color: #333;
     text-align: center;
     font-size: 22px;
     border: none;
     font-weight: bold;
+    touch-action: manipulation;
 }
 
 .botao-pedir{
