@@ -73,7 +73,6 @@ width: 150px
 .destaque-imagem img{
 
     width: 250px;
-    width: auto;
     margin-top: 20px;
 }
 
@@ -148,6 +147,7 @@ input[rtpe=number]::-webkit-outer-spin-button{
     font-size: 18px;
     color: #FFC107;
 }
+
 
 
 
