@@ -41,49 +41,66 @@
         </div>
     </div>
     
-   <script>
-function aumentar(){
-    let input=document.getElementById('quantidade');
-        input.value=parseInt(input.value) +1;
+ <script>
+    // --- FUNÇÕES DOS BOTÕES + E - ---
+    function aumentar() {
+        let input = document.getElementById('quantidade');
+        input.value = parseInt(input.value) + 1;
     }
 
+    function diminuir() {
+        let input = document.getElementById('quantidade');
+        if (input.value > 1) {
+            input.value = parseInt(input.value) - 1;
+        }
+    }
 
-function diminuir(){
-    let input=document.getElementById('quantidade');
-        input.value=parseInt(input.value) -1;
-   }
-
-   function adicionaraopedido() {
-        console.log("Clicou em Adicionar ao Pedido"); 
-    // verifica se o dados do cliente ja esta salvo no navegador que ele acessar
-        let dadosCliente = localStorage.getItem('dadosCliente')
+         // verifica se o dados do cliente ja esta salvo no navegador que ele acessar
+    function adicionaraopedido() {
+        console.log("Clicou em Adicionar ao Pedido"); // Para teste
+        
+        // Verifica se já temos o cliente salvo
+        let dadosCliente = localStorage.getItem('dadosCliente');
 // se nao tem abre a pagina para preencher
-        if(!dadosCliente) {
-            console.log('Cliente novo abrindo o menu para preencher as informaçoes....')
-            document.getElementById('modal-indetificacao').style.display = 'Flex';
-        }else{
+        if (!dadosCliente) {
 // se os dados ja estao salvo nao aparece a pagina para preencher e ja envia para a pagina de pedido novamente
-            console.log('Cliente ja conhecido, finalizando....')
+            console.log("Cliente novo, abrindo modal...");
+            document.getElementById('modal-identificacao').style.display = 'flex';
+        } else {
+
+            console.log("Cliente já conhecido, finalizando...");
             finalizarAdicao();
         }
     }
     // parte de confirmaçao de dados
-    function salvarEAdicionar(){
-        console.log('Clicou em Confirmar e Pedir')
-
-       let nomeInput = document.getElementById('cliente-nome')
-       let telInput = document.getElementById('Cliente-telefone')
-       if (nome === "" || telefone === ""){
-        alert("Por favor, preencha nome e telefone!")
-        return
-       }
+    function salvarEAdicionar() {
+        console.log("Clicou em Confirmar e Pedir");
 // salva no navegador os dados do cliente
+        let nomeInput = document.getElementById('cliente-nome');
+        let telInput = document.getElementById('cliente-telefone');
+
+        // Se por acaso os IDs estiverem errados no HTML, isso evita travar o site
+        if (!nomeInput || !telInput) {
+            alert("Erro no código: IDs dos inputs não encontrados!");
+            return;
+        }
+
+        let nome = nomeInput.value;
+        let telefone = telInput.value;
+
+        // 2. Validação simples
+        if (nome === "" || telefone === "") {
+            alert("Por favor, preencha nome e telefone!");
+            return;
+        }
+
+
         let dados = { nome: nome, telefone: telefone };
         localStorage.setItem('dadosCliente', JSON.stringify(dados));
 // esconde o formularaio de preencimento
         document.getElementById('modal-identificacao').style.display = 'none';
 
-// chama a função final
+//Chama a função final
         finalizarAdicao();
     }
 
@@ -123,3 +140,4 @@ function diminuir(){
    </script>
 </body>
 </html>
+
