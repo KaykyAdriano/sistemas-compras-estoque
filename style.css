@@ -1,3 +1,10 @@
+body{
+    padding-bottom: 80px;
+}
+
+
+
+
 .cabeçalhoareadocliente{
     max-width: 100%;
     height: auto;
@@ -29,6 +36,11 @@
 
 .img-produto img{
 width: 150px
+}
+
+.img-produto2 img{
+width: 150px
+
 }
 
 .link-card{
@@ -125,13 +137,24 @@ width: 150px
     background-color: #FFC107;
     color: black;
     width: 100%;
-    padding: 15px;
+    padding: 20px;
     border: none;
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
- 
 }
+.botao-comprar{
+    background-color: #FFC107;
+    color: black;
+    width: 100%;
+    padding: 15px;
+    margin: 10px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 /* essa linha abaixo tira a setinha que esta bugando a barra de quantidade */
 input[type=number]::-webkit-inner-spin-button,
 input[rtpe=number]::-webkit-outer-spin-button{
@@ -198,6 +221,60 @@ input[rtpe=number]::-webkit-outer-spin-button{
     cursor: pointer;
     margin-top: 10px;
 }
+
+.menuinferior{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FFC107;
+    display: flex;
+    justify-content:space-around;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.item-menu{
+text-decoration:none;
+color: #000000;
+font-size: 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+
+.item-meu:hover, .item-menu:active{
+    color:#FFC107
+}
+
+.item-menu .icone {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+   
+.icone-com-badge{
+    position: relative;
+    display: inline-block;
+}
+
+.badge{
+    position: absolute;
+    top: -5px;
+    right: -8px;
+    background-color: #ff3b30;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 50%;
+    min-width: 15px;
+    text-align: center;
+   
+}
+
+
+
 
 
 
