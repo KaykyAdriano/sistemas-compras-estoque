@@ -195,11 +195,11 @@ input[rtpe=number]::-webkit-outer-spin-button{
 
 /* A caixa branca */
 .modal-caixa {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: rgb(255, 255, 255);
     padding: 30px;
     border-radius: 15px;
-    width: 50%;
-    max-width: 200px;
+    width: 80%;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
@@ -341,10 +341,24 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 .barra-topo{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
 .texto{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.btn-remove-item{
+ background-color: #FFC107;
+ border-radius: 10px;
+ border: none;
+ padding: 10px;
+ margin: 10px;
 
+}
 
+.btn-cancelar{
+ background-color: #FFC107;
+ border-radius: 10px;
+ border: none;
+ padding: 10px;
 
+}
