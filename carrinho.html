@@ -50,7 +50,7 @@
             </div>
 
             <div id="etapa-pagamento" style="display: none;">
-                <h3>Pagamento 💸</h3>
+                <h3>Pagamento</h3>
                 <p>Qual forma de Pagamento?</p>
 
                 <div class="opcoes-pagamento">
@@ -67,6 +67,7 @@
                 <div class="botoes-modal">
                     <button class="btn-cancelar" onclick="voltarParaIdentificacao()">⬅ Voltar</button>
                     <button class="botao-confirmar" onclick="enviarPedidoZap()">Finalizar Pedido</button>
+                    
                 </div>
             </div>
 
@@ -88,7 +89,7 @@
                 return;
             }
 
-            container.innerHTML = '';
+container.innerHTML = '';
             carrinho.forEach((item, index) => {
                 let subtotal = item.preco * item.quantidade;
                 total += subtotal;
@@ -121,6 +122,80 @@ document.getElementById('etapa-identificacao').style.display = 'block'
 document.getElementById('etapa-pagamento').style.display = 'none'
 document.getElementById('modal-identificacao').style.display ='flex'
 }
+
+function irParaPagamento(){
+    let nome = document.getElementById('cliente-nome').value;
+    let telefone = document.getElementById('cliente-telefone').value
+
+    if(nome === "" || telefone === ""){
+        alert('Preencha nome e telefone antes de continuar !')
+        return
+    }
+  // essa linha esconde o formulario de identificação  e mostra a etapa 2 que e a de pagamento 
+document.getElementById('etapa-identificacao').style.display='none'
+document.getElementById('etapa-pagamento').style.display = 'block'  
+}
+
+function voltarParaIdentificacao(){
+    document.getElementById('etapa-pagamento').style.display ='none'
+    document.getElementById('etapa-identificacao').style.display = 'block'
+}
+
+function fecharModal(){
+    document.getElementById('modal-identificacao').style.display = 'none'
+}
+
+function enviarPedidoZap(){ 
+// as linhas abaixo serve para coletar todos os dados 
+let nome = document.getElementById('cliente-nome').value
+            let telefone = document.getElementById('cliente-telefone').value
+            let pagamento = document.getElementById('forma-pagamento').value
+            let troco = document.getElementById('troco-para').value
+
+
+// Essas linhas abaixo monta a mensagem que chega no whatshapp do estabelecimento
+let carrinho = JSON.parse(localStorage.getItem('meuCarrinho')) || []
+let total = 0;
+
+            let mensagem = `*NOVO PEDIDO - DISTRITO*\n\n`;
+            mensagem += `*Cliente:* ${nome}\n`;
+            mensagem += `*Contato:* ${telefone}\n`;
+            mensagem += `*Pagamento:* ${pagamento}\n`;
+            if(pagamento === "Dinheiro" && troco !== "") {
+                mensagem += `*Troco para:* ${troco}\n`;
+            }
+            mensagem += `\n*--- ITENS ---*\n`;
+
+            carrinho.forEach(item => {
+                let subtotal = item.preco * item.quantidade;
+                total += subtotal;
+                mensagem += `${item.quantidade}x ${item.nome} \n`;
+            });
+
+            mensagem += `\n*TOTAL: R$ ${total.toFixed(2)}*\n`;
+            
+// essas linhas abaixo envia mensagem para o estebelecimento
+            let numeroBar = "31983866552";  
+            let url = `https://wa.me/${31983866552}?text=${encodeURIComponent(mensagem)}`;
+            
+            // Limpa carrinho (opcional)
+            // localStorage.removeItem('meuCarrinho');
+            
+            window.open(url, '_blank');
+        }
+function limparCarrinho(){
+    if(confirm("Esvaziar carrinho ?")){
+        localStorage.removeItem('meuCarrinho');
+        renderizarCarrinho()
+    }
+}
+function removerItem(i){
+    let c =JSON.parse(localStorage.getItem('meuCarrinho'))
+    c.splice(i, 1)
+    localStorage.setItem('meuCarrinho', JSON.stringify(c))
+    renderizarCarrinho()
+} 
+
     </script>
 
 </body>
