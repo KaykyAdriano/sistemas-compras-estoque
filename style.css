@@ -3,8 +3,16 @@ body{
 }
 
 
+.produtos{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
-
+.info-produto{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.preço{
+         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 .cabeçalhoareadocliente{
     max-width: 100%;
     height: auto;
@@ -142,6 +150,7 @@ width: 150px
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
+    border-radius: 10px;
 }
 .botao-comprar{
     background-color: #FFC107;
@@ -274,10 +283,63 @@ align-items: center;
 }
 
 
+.informaçao-produtos{
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
+.carrinho-vazio{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+}
 
+.valor-total{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ 
 
+}
 
+.total-pedido {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+}
 
+.item-carrinho{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+    
+}
+
+.preco-item{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ 
+}
+
+.btn-continuar{
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ background-color: #FFC107;
+ border-radius: 10px;
+ border: none;
+ padding: 10px;
+}
+
+.btn-fechar{
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ background-color: #FFC107;
+ border-radius: 10px;
+ border: none;
+ padding: 10px;
+}
+
+.btn-limpar{
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ background-color: #FFC107;
+ border-radius: 10px;
+ border: none;
+ padding: 10px;
+}
+
+.barra-topo{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
 
